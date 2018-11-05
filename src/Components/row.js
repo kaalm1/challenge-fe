@@ -28,7 +28,7 @@ export default class Row extends React.Component{
     backgroundColor = this.state.bots.length !== 0 ? global.BOT_COLOR : backgroundColor
     backgroundColor = this.state.nodes.length !== 0 && this.state.bots.length !== 0 ? global.BOTH_COLOR : backgroundColor
     return(
-      <Grid.Row key={this.props.key} style={{height: (WIDTH - 100) / global.COLUMNS, borderWidth:5, backgroundColor:backgroundColor, padding:1, margin:1, overflowWrap:'break-word'}}>
+      <Grid.Row key={this.props.key} style={{height: (WIDTH - global.WIDTH_REDUCTION) / global.COLUMNS, borderWidth:5, backgroundColor:backgroundColor, padding:1, margin:1, overflowWrap:'break-word'}}>
         {this.state.nodes.map(x=>`${x.Id.slice(0,2)}(${x.Value})`)}
         {this.state.bots.map(x=>`${x.Id}(${x.Score})`)}
       </Grid.Row>
