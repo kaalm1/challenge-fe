@@ -28,11 +28,11 @@ class App extends Component {
   render() {
     console.log(this.state)
     return (
-      <Container style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-        <Grid columns={20}>
-        {_.times(20,j=><Column key={j}/>)}
+      // <Container style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+        <Grid>
+        {_.times(20,j=><Column key={j} bots={this.state.Bots} nodes={this.state.Nodes} column={j+1}/>)}
         </Grid>
-      </Container>
+      // </Container>
     );
   }
 }
