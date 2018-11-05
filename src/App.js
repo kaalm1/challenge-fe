@@ -36,13 +36,12 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state)
     return (
-      // <Container style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+      <div style={{flex:1, justifyContent:'center', alignItems:'center', margin:20}}>
         <Grid>
         {_.times(20,j=><Column key={j} bots={this.state.Bots} nodes={this.state.Nodes} column={j+1}/>)}
         </Grid>
-      // </Container>
+      </div>
     );
   }
 }
