@@ -10,10 +10,11 @@ class App extends Component {
 
   state = {
     Nodes: [],
-    Bots: []
+    Bots: [],
+    sI: null
   }
 
-  componentDidMount = () => {
+  getNodesAndBots = () => {
     fetch("http://headlight-tournament-3.herokuapp.com/nodes")
     .then(res=> res.json())
     .then(x=>this.setState(x))
@@ -21,6 +22,15 @@ class App extends Component {
     fetch("http://headlight-tournament-3.herokuapp.com/bots")
     .then(res=> res.json())
     .then(x=>this.setState(x))
+  }
+
+  componentDidMount = () => {
+
+    this.getNodesAndBots()
+    let sI = setInterval(()=>{
+      this.getNodesAndBots()
+    }, 2000)
+    this.setState({sI})
 
   }
 
