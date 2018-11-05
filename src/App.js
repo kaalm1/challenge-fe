@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Grid } from 'semantic-ui-react'
 import Column from './Components/column'
+import Legend from './Components/legend'
 import _ from 'lodash'
 import './App.css';
 
@@ -37,6 +38,7 @@ class App extends Component {
   render() {
     return (
       <div style={{flex:1, justifyContent:'center', alignItems:'center', margin:20}}>
+        <Legend />
         <Grid>
         {_.times(20,j=><Column key={j} bots={this.state.Bots} nodes={this.state.Nodes} column={j+1}/>)}
         </Grid>

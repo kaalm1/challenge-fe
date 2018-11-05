@@ -20,10 +20,14 @@ Though I would have preferred to build a mobile app with React Native, as grids 
 
 With more time I would've implemented:
    * Cleaner design so that the names and nodes all flow better
-   * Feature A, because it would've been really informative
+   * Path tracing, because it would've been really informative
    * Feature B, because I think it's really cool.
 
-Feature A would've taken roughly another 30 minutes I think, but would add a lot more information. Still, I didn't want to ignore the write-up to implement feature A,
-so I decided to leave it out.
+A cleaner design would take much longer as I would need to figure out all the dynamics involved, and it would have taken another half an hour.
 
-Feature B is a much longer investment, but I think it'd be really cool because of reasons X,Y,Z.
+Path tracing is a much longer investment, but I think it'd be really cool because that way you could see how each of the bots moved. There are a lot of factors that would need to be taken into consideration:
+  * Crossing paths
+  * Retracing paths
+  * Design: would a color scheme or arrows be better?
+  * Unique paths for each bot or just in general paths of all "bots"
+  * If they skip around do you create a path or just the places on the grid they've been
