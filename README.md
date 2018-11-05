@@ -1,44 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mars Mining Discovery Tournament
 
-## Available Scripts
+## My approach
 
-In the project directory, you can run:
+I went with a React approach because it is what I'm most familiar with, as I mostly code in React Native, and seemed like the fastest way to get started. I also decided to use the Semantic React framework as that is a framework I've used extensively and could easily give me the grid-like structure. I like to just get a workable MVP and then add design and other functionality.
 
-### `npm start`
+I started out by deciding to first just get the application to write "hello" 400 times in a 20x20 grid.
+I did this by creating separate components for the rows and columns.
+Once I had the basic structure set in place I placed a one-time api call (componentDidMount without a time-interval) to both "nodes" and "bots" to understand how the json file was built and to figure out how to look over them appropriately.
+I then populated the appropriate squares filtering out for only those nodes and bots that fit that location.
+With a white background filled with bots and nodes I then added the color schemes, border, and width to make sure the grid would stay intact no matter the screen size.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tradeoffs I made
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+I decided to use Semantic grids instead of building my own infrastructure for the grid outlay because it seemed like the fastest way to get going, and time was a factor obviously.
 
-### `npm test`
+Though I would have preferred to build a mobile app with React Native, as grids (using Views and loops) is very simple and elegant, I decided not to use it because the project was a web application and not a mobile app.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future goals
 
-### `npm run build`
+With more time I would've implemented:
+   * Cleaner design so that the names and nodes all flow better
+   * Feature A, because it would've been really informative
+   * Feature B, because I think it's really cool.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feature A would've taken roughly another 30 minutes I think, but would add a lot more information. Still, I didn't want to ignore the write-up to implement feature A,
+so I decided to leave it out.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feature B is a much longer investment, but I think it'd be really cool because of reasons X,Y,Z.

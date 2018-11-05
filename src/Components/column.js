@@ -8,7 +8,7 @@ export default class Column extends React.Component{
 
   render(){
     return(
-      <Grid.Column key={this.props.key} style={{width: (WIDTH - 20) / global.COLUMNS, padding:1, margin:1}}>
+      <Grid.Column key={this.props.key} style={{width: (WIDTH - 100) / global.COLUMNS, padding:1, margin:1}}>
           {_.times(20,j=><Row key={j} nodes={this.props.nodes} bots={this.props.bots} column={this.props.column} row={j+1}/>)}
       </Grid.Column>
     )

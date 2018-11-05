@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Grid } from 'semantic-ui-react'
-import Square from './Components/square'
 import Column from './Components/column'
 import _ from 'lodash'
 import './App.css';
