@@ -2,7 +2,13 @@ import React from 'react'
 import {Grid} from 'semantic-ui-react'
 import Row from './row'
 import _ from 'lodash'
+// Makes sure the width does not exceed the size of the display, making it dynamic
 const WIDTH = window.innerWidth
+
+/**
+ * Creates the columns with the appropriate padding and is the parent for all the rows within that column
+ */
+
 
 export default class Column extends React.Component{
 

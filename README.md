@@ -21,7 +21,8 @@ Though I would have preferred to build a mobile app with React Native, as grids 
 With more time I would've implemented:
    * Cleaner design so that the names and nodes all flow better
    * Path tracing, because it would've been really informative
-   * Feature B, because I think it's really cool.
+   * More dynamic, because I think it's really cool.
+   * Legend for each of the bots and a history schedule
 
 A cleaner design would take much longer as I would need to figure out all the dynamics involved, and it would have taken another half an hour.
 
@@ -31,3 +32,9 @@ Path tracing is a much longer investment, but I think it'd be really cool becaus
   * Design: would a color scheme or arrows be better?
   * Unique paths for each bot or just in general paths of all "bots"
   * If they skip around do you create a path or just the places on the grid they've been
+
+I would create a more dynamic UI:
+  * Instead of displaying the values and scores, it would be a hover, and with a click a small pop up with more information such as which bot took from that node
+  * Which nodes have the bots taken from
+  * Bot ranking, who has mined the most, etc.
+  * More colors for nodes - depending on how much minerals are left there would be different colors, and when it finishes a flashing red.

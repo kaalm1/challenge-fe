@@ -15,27 +15,27 @@ export default class Legend extends Component {
         </Menu.Item>
         <Menu.Item
           name='Bots'
-          style={{backgroundColor:'green'}}
+          style={{backgroundColor:global.BOT_COLOR}}
         >
           Bots
         </Menu.Item>
 
         <Menu.Item
           name='Nodes'
-          style={{backgroundColor:'blue'}}
+          style={{backgroundColor:global.NODE_COLOR}}
         >
           Nodes
         </Menu.Item>
 
         <Menu.Item
           name='Both'
-          style={{backgroundColor:'purple'}}
+          style={{backgroundColor:global.BOTH_COLOR}}
         >
           Both
         </Menu.Item>
         <Menu.Item
           name='None'
-          style={{backgroundColor:'red'}}
+          style={{backgroundColor:global.NOTHING_COLOR}}
         >
           Empty
         </Menu.Item>

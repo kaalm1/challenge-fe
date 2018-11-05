@@ -8,12 +8,20 @@ import './App.css';
 
 class App extends Component {
 
+  /**
+   * Holds all known state of mineral nodes and bots
+   */
+
   state = {
     Nodes: [],
     Bots: [],
     sI: null
   }
 
+  /**
+   * Fetches all known information about mineral nodes, and updates
+   * the state object with that node information
+   */
   getNodesAndBots = () => {
     fetch("http://headlight-tournament-3.herokuapp.com/nodes")
     .then(res=> res.json())
@@ -24,6 +32,8 @@ class App extends Component {
     .then(x=>this.setState(x))
   }
 
+
+  // Continous polling of the nodes and bots so that it displays them in real time
   componentDidMount = () => {
 
     this.getNodesAndBots()
@@ -34,6 +44,10 @@ class App extends Component {
 
   }
 
+  /**
+   * Creates the legend to understand the coloring scheme of the cells as well as the parent for all the cells
+   * It is the parent that passes to all the children all the updated nodes and bots
+   */
 
   render() {
     return (
