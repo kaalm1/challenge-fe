@@ -4,19 +4,22 @@ const WIDTH = window.innerWidth
 
 export default class Row extends React.Component{
   state = {
-    nodes: [{Id:""}]
+    nodes: [],
+    bots: []
   }
 
   componentWillReceiveProps(props){
     let nodes = props.nodes.filter(x=>x.Location.X === this.props.column && x.Location.Y === this.props.row)
-    this.setState({nodes})
+    let bots = props.bots.filter(x=>x.Location.X === this.props.column && x.Location.Y === this.props.row)
+    this.setState({nodes, bots})
   }
 
   render(){
 
     return(
-      <Grid.Row key={this.props.key} style={{height: WIDTH / 20}}>
+      <Grid.Row key={this.props.key} style={{height: WIDTH / 20, borderWidth:5}}>
         {this.state.nodes.map(x=>`${x.Id.slice(0,2)}(${x.Value})`)}
+        {this.state.bots.map(x=>`${x.Id}(${x.Score})`)}
       </Grid.Row>
     )
   }
