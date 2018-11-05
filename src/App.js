@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Container, Grid } from 'semantic-ui-react'
+import Square from './Components/square'
+import Column from './Components/column'
+import _ from 'lodash'
 import './App.css';
 
+
 class App extends Component {
+
+  state = {
+    Nodes: [],
+    Bots: []
+  }
+
+  componentDidMount = () => {
+    fetch("http://headlight-tournament-3.herokuapp.com/nodes")
+    .then(res=> res.json())
+    .then(x=>this.setState(x))
+
+    fetch("http://headlight-tournament-3.herokuapp.com/bots")
+    .then(res=> res.json())
+    .then(x=>this.setState(x))
+
+  }
+
+
   render() {
+    console.log(this.state)
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+        <Grid columns={20}>
+        {_.times(20,j=><Column key={j}/>)}
+        </Grid>
+      </Container>
     );
   }
 }
